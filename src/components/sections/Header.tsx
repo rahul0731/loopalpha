@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import logoUrl from '@/assets/loopalpha-logo.png'
 
 const NAV = [
   { label: 'Home', href: '#top' },
@@ -20,16 +21,8 @@ const SERVICES = [
 
 function Logo({ className }: { className?: string }) {
   return (
-    <a href="#top" aria-label="Loopalpha home" className={cn('flex items-center gap-2.5', className)}>
-      <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-navy to-primary shadow-soft">
-        <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-          <path d="M4 12a8 8 0 1 1 8 8" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" />
-          <circle cx="12" cy="12" r="2.6" fill="#fff" />
-        </svg>
-      </span>
-      <span className="font-heading text-[22px] font-extrabold tracking-tight text-navy">
-        Loop<span className="text-primary">alpha</span>
-      </span>
+    <a href="#top" aria-label="Loopalpha home" className={cn('flex items-center', className)}>
+      <img src={logoUrl} alt="Loopalpha" className="h-10 w-auto sm:h-11" />
     </a>
   )
 }

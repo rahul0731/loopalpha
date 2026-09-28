@@ -1,3 +1,5 @@
+import logoUrl from '@/assets/loopalpha-logo.png'
+
 const NAV_COLS = [
   {
     title: 'Company',
@@ -36,16 +38,8 @@ export function Footer() {
     <footer className="bg-navy pt-16">
       <div className="container grid gap-10 pb-12 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <a href="#top" className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-primary to-sky-400">
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
-                <path d="M4 12a8 8 0 1 1 8 8" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" />
-                <circle cx="12" cy="12" r="2.6" fill="#fff" />
-              </svg>
-            </span>
-            <span className="font-heading text-[22px] font-extrabold tracking-tight text-white">
-              Loop<span className="text-sky-400">alpha</span>
-            </span>
+          <a href="#top" aria-label="Loopalpha home" className="inline-flex items-center">
+            <img src={logoUrl} alt="Loopalpha" className="h-12 w-auto brightness-0 invert" />
           </a>
           <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-slate-400">
             Trusted IT staffing and workforce solutions helping businesses build strong, scalable, and future-ready
